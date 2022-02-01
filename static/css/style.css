@@ -117,7 +117,6 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(23, 112, 110, 0.85)), color-stop(rgba(23, 112, 110, 0.45)), to(rgba(23, 112, 110, 0.25)));
   background: linear-gradient(to right, rgb(0 0 0 / 90%), rgb(0 0 0 / 10%), rgb(0 0 0 / 30%))
   }
 
@@ -404,7 +403,7 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .slider_section .detail-box a:hover {
@@ -474,6 +473,7 @@ a:focus {
   background-color: #f7fafa;
   padding: 25px;
   border-radius: 5px;
+  box-shadow: 0px 1px 2px 0px grey
 }
 
 .veg_section .box .img-box img {
@@ -496,7 +496,7 @@ a:focus {
 }
 
 .veg_section .box .detail-box .price_heading span {
-  color: #b6eb7a;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .veg_section .btn-box {
@@ -512,7 +512,7 @@ a:focus {
 .veg_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #b6eb7a;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -522,8 +522,8 @@ a:focus {
 
 .veg_section .btn-box a:hover {
   background-color: transparent;
-  border-color: #b6eb7a;
-  color: #b6eb7a;
+  border-color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .about_section {
@@ -558,8 +558,7 @@ a:focus {
   top: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(23, 112, 110, 0.1)), color-stop(rgba(23, 112, 110, 0.55)), to(rgba(23, 112, 110, 0.85)));
-  background: linear-gradient(to right, rgba(23, 112, 110, 0.1), rgba(23, 112, 110, 0.55), rgba(23, 112, 110, 0.85));
+  background: linear-gradient(to right, rgb(0 0 0 / 30%), rgb(0 0 0 / 10%), rgb(0 0 0 / 90%))
 }
 
 .about_section .row {
@@ -576,18 +575,18 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #b6eb7a;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 4px;
 }
 
 .about_section .detail-box a:hover {
   background-color: transparent;
-  border-color: #b6eb7a;
-  color: #b6eb7a;
+  border-color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .contact_section {
@@ -641,7 +640,7 @@ a:focus {
   text-transform: uppercase;
   display: inline-block;
   padding: 12px 55px;
-  background-color: #b6eb7a;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -651,8 +650,8 @@ a:focus {
 
 .contact_section .form_container button:hover {
   background-color: transparent;
-  border-color: #b6eb7a;
-  color: #b6eb7a;
+  border-color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .contact_section .map_container {
@@ -765,7 +764,7 @@ a:focus {
 .client_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #b6eb7a;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -776,8 +775,8 @@ a:focus {
 
 .client_section .btn-box a:hover {
   background-color: transparent;
-  border-color: #b6eb7a;
-  color: #b6eb7a;
+  border-color: rgba(0, 0, 0, 0.9);
+  color: rgba(0, 0, 0, 0.9);
 }
 
 /* footer section*/
@@ -785,7 +784,7 @@ a:focus {
   padding: 175px 0 25px 0;
   -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
-  background-color: #0e4644;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fefefe;
 }
 
@@ -829,8 +828,8 @@ a:focus {
 }
 
 .footer_section .social_box a:hover {
-  color: #b6eb7a;
-  border-color: #b6eb7a;
+  color: rgba(0, 0, 0, 0.9);
+  border-color: rgba(0, 0, 0, 0.9);
 }
 
 .footer_section .contact_nav {
@@ -867,7 +866,7 @@ a:focus {
 }
 
 .footer_section .contact_nav a:hover {
-  color: #b6eb7a;
+  color: #b3d7ff;
 }
 
 .footer_section .footer_form input {
@@ -884,18 +883,18 @@ a:focus {
 .footer_section .footer_form button {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #b6eb7a;
+  background-color: rgba(0, 0, 0, 0.9);
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: 1px solid transparent;
-  border-radius: 0px;
+  border-radius: 4px;
 }
 
 .footer_section .footer_form button:hover {
   background-color: transparent;
-  border-color: #b6eb7a;
-  color: #b6eb7a;
+  border-color: white;
+  color: white;
 }
 
 .footer_section .footer-info {

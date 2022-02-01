@@ -1,29 +1,44 @@
 from django.shortcuts import render
-from django.db import models
+from django.views.generic import ListView, DetailView
+
+from .models import Brand, Product
 
 
 # Create your views here.
 
-def index(request):
-    return render(request, "index.html")
-
-
 def home(request):
-    return render(request, 'makeup/index.html')
+    brands = Brand.objects.all()
+    products = Product.objects.all()
+    context = {
+        "brands": brands,
+        "products": products
+    }
+    return render(request, "makeup/index.html", context)
 
 
-def brands(request):
-
-    return render(request, "makeup/brands.html")
-
-
-def products(request):
-    return render(request, "makeup/products.html")
-
-
-def brand_details(request):
-    return render(request, "makeup/brand_details.html")
+# def brands(request):
+#     return render(request, "makeup/brands.html")
+#
+#
+# def products(request):
+#     return render(request, "makeup/products.html")
 
 
-def product_details(request):
-    return render(request, "makeup/product_details.html")
+class ProductDetailsView(DetailView):
+    model = Product
+    template_name = 'makeup/product_details.html'
+
+
+class ProductListView(ListView):
+    model = Product
+    template_name = 'makeup/products.html'
+
+
+class BrandDetailsView(DetailView):
+    model = Brand
+    template_name = 'makeup/brand_details.html'
+
+
+class BrandListView(ListView):
+    model = Brand
+    template_name = 'makeup/brands.html'

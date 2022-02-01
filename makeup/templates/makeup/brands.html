@@ -1,12 +1,14 @@
-{% extends "base.html" %}
+{% extends "makeup/base.html" %}
 
 {% block content %}
 <h1> List of our brands </h1>
 
+<h1>Brands</h1>
+{% for brand in object_list %}
 <ul>
-    {
-    <li>
-
-    </li>
+    {{brand.slug}}
+    <a href="{{ brand.get_absolute_url }}">{{brand.name}}</a>
 </ul>
+{% endfor %}
+
 {% endblock %}

@@ -6,22 +6,21 @@ from django.urls import reverse
 class Brand(models.Model):
     name = models.CharField(max_length=100)
     origin = models.CharField(max_length=100)
-
-    # slug = models.SlugField(max_length=120, null=True)
+    slug = models.SlugField(null=True, unique=True)
 
     def __str__(self):
         return f"The brand name: {self.name}\n, " \
                f"The brand origin: {self.origin}\n"
 
     def get_absolute_url(self):
-        return reverse("brands")
+        return reverse('brand_details', kwargs={'slug': self.slug})
 
 
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=100)
     kind = models.CharField(max_length=50)
-    # slug = models.SlugField(max_length=120, null=True)
+    slug = models.SlugField(unique=True, null=True)
     description = models.TextField(null=True, blank=True)
     expire_date = models.DateField(null=True, blank=True)
     price = models.IntegerField()
@@ -36,4 +35,4 @@ class Product(models.Model):
                f"The brand name of the product: {self.brand.name}\n"
 
     def get_absolute_url(self):
-        return reverse("products")
+        return reverse("product_details", kwargs={'slug': self.slug})

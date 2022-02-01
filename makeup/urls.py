@@ -1,10 +1,11 @@
 from django.urls import path
-from . import views
+
+from makeup.views import *
 
 urlpatterns = [
-    path("", views.home, name="home"),
-    path("brands/", views.brands, name="brands"),
-    path("products/", views.products, name="products"),
-    path("brand_details/", views.brand_details, name="brand_details"),
-    path("product_details/", views.product_details, name="product_details"),
+    path("", home, name="home"),
+    path("brands/", BrandListView.as_view(), name="brands"),
+    path("products/", ProductListView.as_view(), name="products"),
+    path("brands/brand_details/<slug:slug>", BrandDetailsView.as_view(), name="brand_details"),
+    path("products/product_details/<slug:slug>", ProductDetailsView.as_view(), name="product_details"),
 ]

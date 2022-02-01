@@ -1,6 +1,10 @@
-{% extends "base.html" %}
+{% extends "makeup/base.html" %}
 
 {% block content %}
 <h1> Brand details </h1>
-
+<div>
+    <h2>{{ object.name }}</h2>
+    <p>{{ object.origin }}</p>
+    <p>{{ object.slug }}</p>
+</div>
 {% endblock %}

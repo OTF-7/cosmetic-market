@@ -1,7 +1,162 @@
-{% extends "base.html" %}
+{% extends 'makeup/base.html' %}
 
 {% block content %}
-<h1> Home </h1>
 
+{% load static %}
+
+<!-- veg section -->
+
+<section class="veg_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Best selling brands
+            </h2>
+            <p>
+                which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
+                be sure there isn't an
+            </p>
+        </div>
+
+        <div class="row">
+            {% for brand in brands %}
+            <div class="col-md-6 col-lg-4">
+                <div class="box">
+                    <div class="img-box">
+                        <img alt="" src="{% static 'images/p1.png' %}">
+                    </div>
+                    <div class='detail-box'
+                    ">
+                    <a href="">
+                        {{brand.name}}
+                    </a>
+                    <div class="price_box">
+                        <h6 class="price_heading">
+                            {{brand.origin}}
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <h1 style="text-align:center; color:gray; ">
+            There is no any brand yet
+        </h1>
+        {% endfor %}
+    </div>
+
+
+    </div>
+</section>
+
+<!-- end veg section -->
+
+<!-- about section -->
+
+<section class="about_section ">
+    <div class="about_bg_box">
+        <img alt="" src="{% static 'images/about-bg.jpg' %}">
+    </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 ml-auto ">
+                <div class="detail-box">
+                    <div class="heading_container">
+                        <h2>
+                            We Provide <br>
+                            Fresh Vegetables
+                        </h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ex, sequi amet similique
+                        necessitatibus quas minus repudiandae quae culpa optio ipsum quibusdam praesentium saepe qui
+                        dolore voluptate iure sit aut.
+                    </p>
+                    <a class="mt_20" href="">
+                        Show All Brands
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end about section -->
+
+<section class="veg_section layout_padding">
+    <div class="container">
+        <div class="heading_container heading_center">
+            <h2>
+                Best selling products
+            </h2>
+            <p>
+                which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to
+                be sure there isn't an
+            </p>
+        </div>
+
+        <div class="row">
+            {% for product in products %}
+
+            <div class="col-md-6 col-lg-4">
+                <div class="box">
+                    <div class="img-box">
+                        <img alt="" src="{% static 'images/p1.png' %}">
+                    </div>
+                    <div class="{% static 'detail-box' %}">
+                        <a href="">
+                            {{product.name}}
+                        </a>
+                        <div class="price_box">
+                            <h6 class="price_heading">
+                                <span>$</span> {{product.price}}
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <h1 style="text-align:center; color:gray; ">
+                There is no any product yet
+            </h1>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- end veg section -->
+
+<!-- about section -->
+
+<section class="about_section ">
+    <div class="about_bg_box">
+        <img alt="" src="{% static 'images/about-bg.jpg' %}">
+    </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6 ml-auto ">
+                <div class="detail-box">
+                    <div class="heading_container">
+                        <h2>
+                            We Provide <br>
+                            Fresh Vegetables
+                        </h2>
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad ex, sequi amet similique
+                        necessitatibus quas minus repudiandae quae culpa optio ipsum quibusdam praesentium saepe qui
+                        dolore voluptate iure sit aut.
+                    </p>
+                    <a class="mt_20" href="">
+                        Show All Products
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- end about section -->
 
 {% endblock %}
